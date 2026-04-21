@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Approved</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+  <div class="card center">
+    <h2>Application Approved</h2>
+
+    <p>Congratulations. Your application has been successfully processed.</p>
+
+    <div class="card">
+      <p><strong>Application ID:</strong> APP-2026-88421</p>
+      <p><strong>Reference Code:</strong> REF-009183</p>
+      <p><strong>Status:</strong> Verified & Pending Final Processing</p>
+    </div>
+
+    <p style="margin-top:10px;">
+      Please proceed to the next stage to complete your process.
+    </p>
+
+    <button onclick="nextStep()">Continue</button>
+  </div>
+</div>
+
+<script>
+function nextStep() {
+  window.location.href = "donation-info.html";
+}
+</script>
+<div class="card center">
+  <p>Need an agent?</p>
+
+  <a href="https://wa.me/2349113558909" target="_blank">
+    <button>Chat on WhatsApp</button>
+  </a>
+</div>
+</body>
+</html>

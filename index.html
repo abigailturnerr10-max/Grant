@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COMMUNITY BLOCK GRANT PROGRAM</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HERO SECTION -->
+  <section class="card center">
+    <h1>COMMUNITY BLOCK GRANT PROGRAM</h1>
+    <p>
+      
+      Empowering individuals and small businesses with financial support to grow, scale, and succeed.
+    </p>
+   
+
+
+
+    <div class="mt-20">
+      <button onclick="goApply()">Apply for Grant</button>
+    </div>
+  </section>
+
+  <!-- INFO SECTION -->
+  <section class="card">
+    <h2>About the Program</h2>
+    <p>
+      This initiative is designed to support qualified applicants with structured funding opportunities based on eligibility and review.
+    
+    </p>
+    <h5>
+    1. ALL FUNDS WILL BE RETURNED TO THE MINISTRY OF ECONOMY PROPERTY AS UNCLAIMED FUNDS.
+    </h5>
+    <h5>
+      2. YOUR REF NUMBER MUST BE IN ALL YOUR MAILS.BE6006/85428.
+    </h5>
+    <h5>
+
+      3. MAKE SURE TO INFORM THE CLAIMS OFFICER OF ANY CHANGE OF NAMES OR ADDRESSES.
+    </h5>
+    <h5>
+      4. MAKE SURE ALL INFORMATION ABOUT YOUR WINNINGS ARE CONFIDENTIAL FOR SECURITY PURPOSE SO THAT THE EXPRESS PARCEL DELIVERY SERVICE WILL NOT HAVE PROBLEM ON THEIR WAY COMING TO DELIVER YOUR MONEY TO YOU.
+    </h5>
+    <h5>
+     MAKE SURE TO GET BACK US IN ORDER TO AVOID UNNECESSARY DELAYS AND COMPLICATIONS.
+    </h5>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="card">
+    <h2>Benefits</h2>
+    <p>✔ Access to resources</p>
+    <p>✔ Community Impact</p>
+    <p>✔ Global accessibility</p>
+    <p>✔ Encouragement of Innovation</p>
+    <p>✔ Support for Growth</p>
+    <p>✔ Financial Relief</p>
+  </section>
+
+  <!-- SECONDARY ACTION (LEFT / OPTIONAL FLOW) -->
+  <section class="card center">
+    <h2>Alternative Access</h2>
+    <p>If you already understand the process, you may proceed directly.</p>
+
+    <button onclick="goPayment()" style="background:#64748b;">
+      Proceed to Payment
+    </button>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="center">
+    <p>© Grant Support Program</p>
+  </footer>
+
+  <script src="storage.js"></script>
+
+<script>
+function goApply() {
+  window.location.href = "apply.html";
+}
+
+function goPayment() {
+  window.location.href = "pay.html";
+}
+
+// 🔥 CHECK IF USER HAS ALREADY APPLIED
+const applications = JSON.parse(localStorage.getItem("applications")) || [];
+const latest = applications[applications.length - 1];
+
+// OPTIONAL PERSONALIZATION
+if (latest) {
+  const name = latest.name;
+
+  const hero = document.querySelector("h1");
+  hero.innerText = `Welcome, ${name}`;
+
+  const subtitle = document.querySelector("section p");
+  subtitle.innerText = "Continue your grant application process below.";
+}
+</script>
+<script>
+function resetAll() {
+  localStorage.clear();
+  alert("Demo reset complete");
+  location.reload();
+}
+</script>
+<div class="card center">
+  <p>Need an agent?</p>
+
+  <a href="https://wa.me/2349113558909" target="_blank">
+    <button>Chat on WhatsApp</button>
+  </a>
+</div>
+</body>
+</html>

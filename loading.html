@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="card center">
+    <h2>Verifying Application</h2>
+    <p id="step">Initializing secure system...</p>
+  </div>
+</div>
+
+<script>
+const steps = [
+  "Validating identity...",
+  "Checking application integrity...",
+  "Cross-verifying eligibility rules...",
+  "Finalizing decision..."
+];
+
+let i = 0;
+const stepEl = document.getElementById("step");
+
+const interval = setInterval(() => {
+  stepEl.innerText = steps[i];
+  i++;
+
+  if (i === steps.length) {
+    clearInterval(interval);
+
+    const apps = JSON.parse(localStorage.getItem("applications")) || [];
+    const user = apps[apps.length - 1];
+
+    const eligible =
+      /^[A-Za-z ]{3,}$/.test(user.name) &&
+      /^[^\s@]+@gmail\.com$/.test(user.email) &&
+      /^[0-9+]{10,15}$/.test(user.phone);
+
+    setTimeout(() => {
+      window.location.href = eligible ? "success.html" : "not-eligible.html";
+    }, 800);
+  }
+}, 1200);
+</script>
+<div class="card center">
+  <p>Need an agent?</p>
+
+  <a href="https://wa.me/2349113558909" target="_blank">
+    <button>Chat on WhatsApp</button>
+  </a>
+</div>

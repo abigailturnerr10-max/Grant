@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Payment</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+
+</nav>
+
+<h1>Payment Options</h1>
+
+<section>
+  <h2>Pay with Bitcoin</h2>
+
+  <p><strong>Step 1:</strong> Open your Bitcoin wallet</p>
+  <p><strong>Step 2:</strong> Send the exact amount to this address:</p>
+
+  <p class="btc-address">YOUR_BTC_ADDRESS_HERE</p>
+
+  <p><strong>Step 3:</strong> Save your transaction ID (TXID)</p>
+
+  <p><strong>Step 4:</strong> Send your payment details using the form below(PLEASE SEND VIA WHATSAPP FOR FASTER VERIFICATION)</p>
+</section>
+
+<hr>
+
+<section>
+  <h2>Important Instructions</h2>
+
+  <ul>
+    <li>Send the exact amount for your package</li>
+    <li>Include your product reference (e.g. A001)</li>
+    <li>Payments are verified manually</li>
+    <li>Processing may take some time after confirmation</li>
+  </ul>
+</section>
+<div class="grid">
+  <div class="product">...</div>
+  <div class="product">...</div>
+</div>
+<hr>
+
+<section>
+  <h2>Submit Payment Details</h2>
+
+  <!-- This form does NOT store data (no backend) -->
+  <form onsubmit="handleSubmit(event)">
+
+    <input type="text" id="name" placeholder="Your Name" required><br><br>
+
+    <input type="text" id="reference" placeholder="Package name" required><br><br>
+
+    <input type="text" id="txid" placeholder="Transaction ID (TXID)" required><br><br>
+
+    <button type="submit">Submit</button>
+
+  </form>
+<a href="https://wa.me/234XXXXXXXXXX?text=Name:%20___%20Ref:%20___%20TXID:%20___">
+  Send Payment Details via WhatsApp
+</a>
+
+  <p id="message"></p>
+
+</section>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const ref = document.getElementById("reference").value;
+  const txid = document.getElementById("txid").value;
+
+  // Since no backend, just show confirmation
+  document.getElementById("message").innerText =
+    "Thank you " + name + ". Your payment details have been noted. Contact us to complete verification.";
+
+  // Optional: log to console (for testing only)
+  console.log({ name, ref, txid });
+}
+</script>
+<div class="card center">
+  <p>Need an agent?</p>
+
+  <a href="https://wa.me/2349113558909" target="_blank">
+    <button>Chat on WhatsApp</button>
+  </a>
+</div>
+</body>
+</html>

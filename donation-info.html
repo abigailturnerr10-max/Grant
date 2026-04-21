@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donation Information</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+<div class="card">
+  <h2 id="greeting">Next Step: </h2>
+  <p id="userText"></p>
+</div>
+    <div class="card">
+      <h2>Step 1: DISCRETION</h2>
+      <p>
+       KEEP THIS NOTIFICATION STRICTLY FROM PUBLIC NOTICE UNTIL YOUR CLAIM HAS BEEN PROCESSED AND YOUR MONEY REMITTED.
+      </p>
+      <H6> DO NOT DISCLOSE YOUR GRANTS INFORMATION TO ANYONE, YOU WILL BE DISQUALIFIED AUTOMATICALLY NOT UNTIL YOU GET YOUR MONEY. WE DO THIS TO MAKE SURE REAL GRANT WINNERS CLAIM THEIR MONEY WE'VE HAD SOME SITUATIONS WHERE OTHER PEOPLE CLAIM WHAT IS NOT THEIRS. I HOPE YOU UNDERSTAND THIS ?</H6>
+    </div>
+
+    <div class="card">
+      <h2>Why This Step Exists</h2>
+      <p>✔ Ensures Grants cannot be claimed twice</p>
+      <p>✔ Once payments are made it will be used to handle the clearance of the grant on our end</p>
+      <p>✔ Covers all delivery</p>
+      <p>✔ Supports verification process</p>
+      <p>✔ Ensures fair allocation of grants</p>
+    </div>
+
+    <div class="card">
+      <h2>Important Notice</h2>
+      <p>
+        This step is part of the official processing flow. Applications that do not complete this step
+        may not be finalized.
+      </p>
+    </div>
+    <div class="card">
+      <h2>Clearance and Logistics</h2>
+      <p>
+        YOU ARE TO CHOOSE THE AMOUNT YOU WISH TO CLAIM FROM US NOTE THAT YOU WILL PAY FOR THE CLEARANCE FEES AND DELIVERY FEES... WE WILL MAKE EVERY EFFORT TO SHIP YOUR ORDER AS SOON AS POSSIBLE YOU ARE TO CHOOSE BELOW AMOUNT YOU WANT TO CLAIM.
+      </p>
+    </div>
+
+  <!-- PACKAGE OPTIONS -->
+  <div class="card" onclick="selectPackage('basic')" style="cursor:pointer;">
+    <h3>BASIC SUPPORT</h3>
+    <p>Basic processing support</p>
+    <p><strong>You pay $1,000 and get $45,000,00</strong></p>
+  </div>
+
+  <div class="card" onclick="selectPackage('standard')" style="cursor:pointer;">
+    <h3>STANDARD SUPPORT</h3>
+    <p> Standard processing and faster review</p>
+    <p><strong>You Pay $2,000 and get $150,000,00</strong></p>
+  </div>
+
+  <div class="card" onclick="selectPackage('premium')" style="cursor:pointer;">
+    <h3>PREMIUM SUPPORT</h3>
+    <p>Premium priority processing + full assistance</p>
+    <p><strong>You pay $3,600 and get $175,000.00</strong></p>
+  </div>
+  
+  <div class="card" onclick="selectPackage('platinum')" style="cursor:pointer;">
+    <h3>PLATINUM SUPPORTT</h3>
+    <p>Increased priority processing + full assistance</p>
+    <p><strong>You pay $3,600 and get $175,000.00</strong></p>
+  </div>
+  <div class="card" onclick="selectPackage('Diamond')" style="cursor:pointer;">
+    <h3>DIAMOND SUPPORT</h3>
+    <p>Premium priority processing + full assistance</p>
+    <p><strong>You pay $5,500 and get $235,000.00</strong></p>
+  </div>
+   <div class="card" onclick="selectPackage('ELIE')" style="cursor:pointer;">
+    <h3>ELITE SUPPORT</h3>
+    <p>Elite priority processing + full assistance</p>
+    <p><strong>You pay $9,450 and get $300,000.00</strong></p>
+  </div>
+  <div class="card" onclick="selectPackage('Ultimate')" style="cursor:pointer;">
+    <h3>ULTIMATE SUPPORT</h3>
+    <p>Ultimate priority processing + full assistance</p>
+    <p><strong>You pay $15,000 and get $410,000.00</strong></p>
+  </div>
+
+    <div class="card center">
+      <h2>PROCEED TO PAYMENT</h2>
+      <H5>NOTE THAT WE ONLY ACCEPT BITCOIN ON THE WEBSITE. PLEASE CONTACT OUR AGENTS FOR A DIFFERENT PAYMENT OPTION</H5>
+      <p>You will be redirected to the secure payment page.</p>
+
+      <button onclick="goDonate()">Continue</button>
+    </div>
+
+  </div>
+
+  <script>
+    function goDonate() {
+      window.location.href = "pay.html"; // your existing page
+    }
+  </script>
+
+</body>
+</html>
+<script>
+  const applications = JSON.parse(localStorage.getItem("applications")) || [];
+  const latest = applications[applications.length - 1];
+
+  const name = latest ? latest.name : "Applicant";
+
+  document.getElementById("greeting").innerText =
+    "Next Step: Program Support";
+
+  document.getElementById("userText").innerText =
+    `Hi ${name}, your application has been successfully reviewed. To proceed with final processing, complete the clearance and delivery Fees.`;
+</script>
+<div class="card center">
+  <p>Need an agent?</p>
+
+  <a href="https://wa.me/2349113558909" target="_blank">
+    <button>Chat on WhatsApp</button>
+  </a>
+</div>
