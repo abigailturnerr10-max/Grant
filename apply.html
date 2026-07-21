@@ -1,94 +1,637 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Application</title>
-  <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+
+Apply for Financing | Pinnacle Community Lending Group
+
+</title>
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="style.css">
+
 </head>
 
 <body>
 
-  <div class="container">
-    <div class="card">
-      <h2>Grant Application</h2>
-      <div class="card">
-  <h2>Step 1: Application Submission</h2>
-  <p>Complete the form below to begin eligibility review.</p>
+<header class="navbar">
+
+<div class="container nav-wrapper">
+
+<a href="index.html"
+class="brand">
+
+<img
+src="pch logo.png"
+class="logo"
+alt="PCLG">
+
+<div class="brand-text">
+
+<h3>
+
+Pinnacle Community Lending Group
+
+</h3>
+
+<span>
+
+Manufactured Home Community Lending Program
+
+</span>
+
 </div>
-<div class="card">
-  <h2>Application Instructions</h2>
 
-  <p>To be considered for this program, ensure your details meet the following requirements:</p>
+</a>
 
-  <ul>
-    <li>Full Name must contain only letters (no numbers or symbols)</li>
-    <li>Email must be valid and active (Gmail preferred)</li>
-    <li>Phone number must be reachable and correctly formatted</li>
-    <li>All fields must be filled correctly before submission</li>
-  </ul>
+<button
+type="button"
+class="secondary-button"
+onclick="window.location.href='index.html'">
 
-  <p><strong>Note:</strong> Incomplete or invalid applications will not pass eligibility screening.</p>
+← Back Home
+
+</button>
+
 </div>
-      <form id="grantForm">
 
-        <input type="text" id="name" placeholder="Full Name" required>
-        <input type="email" id="email" placeholder="Email Address" required>
-        <input type="tel" id="phone" placeholder="Phone Number" required>
+</header>
 
-        <button type="submit">Check Eligibility</button>
-<p style="font-size:12px; opacity:0.7;">
-Your application will enter a secure review system after submission.
+<section class="about-section">
+
+<div class="container">
+
+<div class="card hero-card">
+
+<span class="section-label">
+
+Secure Loan Application
+
+</span>
+<div class="card center mt-20">
+
+<h3>
+
+Application Process
+
+</h3>
+
+<div class="benefits-grid">
+
+<div class="benefit-card">
+
+<div class="benefit-icon">
+
+1
+
+</div>
+
+<h3>
+
+Submit
+
+</h3>
+
+<p>
+
+Complete your secure application.
+
 </p>
-      </form>
 
-    </div>
-  </div>
+</div>
 
-  <script src="storage.js"></script>
+<div class="benefit-card">
 
+<div class="benefit-icon">
+
+2
+
+</div>
+
+<h3>
+
+Review
+
+</h3>
+
+<p>
+
+Our lending specialists review your information.
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<div class="benefit-icon">
+
+3
+
+</div>
+
+<h3>
+
+Next Steps
+
+</h3>
+
+<p>
+
+Qualified applicants are contacted regarding available financing options.
+
+</p>
+
+</div>
+</div>
+</div>
+
+<div class="card mt-20">
+
+<span class="section-label">
+
+Program Overview
+
+</span>
+
+<h2>
+
+Available Financing Solutions
+
+</h2>
+
+<p class="lead">
+
+Our Manufactured Home Community Lending Program is designed specifically for homeowners whose homes are located within professionally managed communities on leased land. We understand the challenges many applicants face with traditional financing and offer loan solutions tailored to these unique circumstances.
+
+</p>
+
+<div class="benefits-grid">
+
+<div class="benefit-card">
+
+<div class="benefit-icon">🏠</div>
+
+<h3>Purchase & Refinance</h3>
+
+<p>
+
+First Mortgage Loans
+
+<br>
+
+Refinancing Options
+
+<br>
+
+Second Mortgage Loans
+
+</p>
+
+</div>
+
+
+<div class="benefit-card">
+
+<div class="benefit-icon">🛠</div>
+
+<h3>Home Improvements</h3>
+
+<p>
+
+Home Improvement Loans
+
+<br>
+
+Emergency Repair Loans
+
+<br>
+
+Home Equity Financing
+
+</p>
+
+</div>
+
+<div class="benefit-card">
+
+<div class="benefit-icon">💼</div>
+
+<h3>Additional Programs</h3>
+
+<p>
+
+Debt Consolidation
+
+<br>
+
+Personal Property Loans
+
+<br>
+
+Lines of Credit
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="card application-card">
+
+<div class="application-header">
+
+<span class="section-label">
+
+Secure Application
+
+</span>
+
+<h2>
+
+Begin Your Loan Application
+
+</h2>
+
+<p class="lead">
+
+Complete the secure form below to begin your eligibility review.
+
+Estimated completion time: approximately 2 minutes.
+
+</p>
+
+</div>
+
+<div class="application-body">
+
+<form id="grantForm">
+
+<div class="input-group">
+
+<label>
+
+Full Legal Name
+
+</label>
+
+<input
+type="text"
+id="name"
+placeholder="Enter your full legal name"
+required>
+
+</div>
+
+<div class="input-group">
+
+<label>
+
+Email Address
+
+</label>
+
+<input
+type="email"
+id="email"
+placeholder="example@email.com"
+required>
+
+</div>
+
+<div class="input-group">
+
+<label>
+
+Phone Number
+
+</label>
+
+<input
+type="tel"
+id="phone"
+placeholder="(555) 123-4567"
+required>
+
+</div>
+
+<div class="input-group">
+
+<label>
+
+Loan Program
+
+</label>
+
+<select id="loanProgram">
+
+<option value="">Select Loan Program</option>
+
+<option>First Mortgage Loan</option>
+
+<option>Second Mortgage Loan</option>
+
+<option>Home Improvement Loan</option>
+
+<option>Emergency Repair Loan</option>
+
+<option>Home Equity Loan</option>
+
+<option>Debt Consolidation Loan</option>
+
+<option>Line of Credit</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>
+
+Requested Loan Amount
+
+</label>
+
+<select id="loanAmount">
+
+<option value="">Choose Amount</option>
+
+<option>$5,000</option>
+
+<option>$10,000</option>
+
+<option>$15,000</option>
+
+<option>$20,000</option>
+
+<option>$25,000</option>
+
+<option>$35,000</option>
+
+<option>$50,000</option>
+
+<option>$75,000</option>
+
+<option>$100,000</option>
+
+<option>$150,000</option>
+
+<option>$200,000</option>
+
+<option>$250,000</option>
+
+</select>
+
+</div>
+<div class="input-group">
+
+<label>
+
+Preferred Loan Term
+
+</label>
+
+<select id="loanTerm">
+
+<option value="">Select Preferred Loan Term</option>
+
+<option>3 Years</option>
+
+<option>5 Years</option>
+
+<option>7 Years</option>
+
+<option>10 Years</option>
+
+<option>15 Years</option>
+
+<option>20 Years</option>
+
+</select>
+
+</div>
+
+<div class="input-group">
+
+<label>
+
+Purpose of Loan
+
+</label>
+
+<select id="purpose">
+
+<option value="">Select Purpose</option>
+
+<option>Purchase</option>
+
+<option>Refinance</option>
+
+<option>Home Improvements</option>
+
+<option>Emergency Repairs</option>
+
+<option>Debt Consolidation</option>
+
+<option>Other</option>
+
+</select>
+
+</div>
+
+<div class="secure-box">
+
+<div class="secure-icon">
+
+🔒
+
+</div>
+
+<div>
+
+<strong>
+
+Secure Submission
+
+</strong>
+
+<p>
+
+Your information is securely processed for eligibility review.
+
+</p>
+
+</div>
+
+</div>
+
+<button
+id="submitApplication"
+type="submit"
+class="primary-button application-button">
+
+Continue to Eligibility Review
+
+</button>
+
+<p class="application-note">
+
+Submitting this application does not constitute final loan approval.
+
+</p>
+
+</form>
+
+</div>
+
+</div>
+<div class="card center mt-20">
+
+<span class="section-label">
+
+Need Assistance?
+
+</span>
+
+<h2>
+
+Speak With a Lending Specialist
+
+</h2>
+
+<p class="lead">
+
+If you have questions regarding available loan programs or need assistance completing your application, our team is available to help.
+
+</p>
+
+<div
+style="margin-top:28px;">
+
+<a href="mailto:pchclearinghouse774@gmail.com"
+   class="secondary-button">
+    Contact a Lending Specialist
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<div class="container">
+
+<p>
+
+© 2026 Pinnacle Community Lending Group. All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+<script src="storage.js"></script>
 
 <script>
-document.getElementById("grantForm").addEventListener("submit", function(e) {
-  e.preventDefault();
 
-  const data = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    phone: document.getElementById("phone").value
-  };
+const form = document.getElementById("grantForm");
 
-  StorageAPI.saveApplication(data);
+form.addEventListener("submit", function(e){
 
-  const eligible = fakeCheck(data);
+e.preventDefault();
 
-  if (eligible) {
-    localStorage.setItem("eligible", "true");
-    window.location.href = "loading.html";
-  } else {
-    localStorage.setItem("eligible", "false");
-    window.location.href = "not-eligible.html";
-  }
+const submitButton=document.getElementById("submitApplication");
+
+submitButton.disabled=true;
+
+submitButton.innerHTML="Checking Eligibility...";
+
+const data={
+
+name:document.getElementById("name").value.trim(),
+
+email:document.getElementById("email").value.trim(),
+
+phone:document.getElementById("phone").value.trim(),
+
+loanProgram:document.getElementById("loanProgram").value,
+
+loanAmount:document.getElementById("loanAmount").value,
+
+purpose:document.getElementById("purpose").value
+
+};
+
+StorageAPI.saveApplication(data);
+
+const eligible=fakeCheck(data);
+
+setTimeout(function(){
+
+if(eligible){
+
+localStorage.setItem("eligible","true");
+
+window.location.href="loading.html";
+
+}
+
+else{
+
+localStorage.setItem("eligible","false");
+
+window.location.href="not-eligible.html";
+
+}
+
+},1800);
+
 });
 
+function fakeCheck(user){
 
-// ✅ SINGLE CLEAN FAKE CHECK FUNCTION
-function fakeCheck(user) {
+const nameValid=/^[A-Za-z ]{3,}$/.test(user.name);
 
-  const nameValid = /^[A-Za-z ]{3,}$/.test(user.name);
+const emailValid=/^[^\s@]+@gmail\.com$/.test(user.email);
 
-  const emailValid = /^[^\s@]+@gmail\.com$/.test(user.email);
+const phoneValid=/^[0-9+]{10,15}$/.test(user.phone);
 
-  const phoneValid = /^[0-9+]{10,15}$/.test(user.phone);
+return nameValid && emailValid && phoneValid;
 
-  return nameValid && emailValid && phoneValid;
 }
+
 </script>
-<div class="card center">
-  <p>Need an agent?</p>
-  <a href="mailto:pchclearinghouse774@gmail.com">
-  <button>Need an Agent? Contact Us</button>
-</a>
-</div>
+
 </body>
+
 </html>
